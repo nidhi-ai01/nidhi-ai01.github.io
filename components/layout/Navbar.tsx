@@ -17,6 +17,7 @@ const navItems = [
 export default function Navbar() {
   const [active, setActive] = useState("about");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const sections = navItems
@@ -31,9 +32,7 @@ export default function Navbar() {
           }
         });
       },
-      {
-        threshold: 0.4,
-      }
+      { threshold: 0.4 }
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -41,8 +40,34 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const onScroll = () => {
+      const current = window.scrollY;
+
+      if (current < 20) {
+        setVisible(true);
+      } else if (current > lastScrollY) {
+        setVisible(false);
+      } else {
+        setVisible(true);
+      }
+
+      lastScrollY = current;
+    };
+
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-background/70 backdrop-blur-xl supports-[backdrop-filter]:bg-background/50">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-background/70 backdrop-blur-xl supports-[backdrop-filter]:bg-background/50 transition-transform duration-300 ${
+        visible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
         <a
           href="#about"
@@ -51,7 +76,6 @@ export default function Navbar() {
           Nidhi Tiwari
         </a>
 
-        {/* Desktop Navigation */}
         <div className="hidden items-center gap-8 md:flex">
           {navItems.map((item) => {
             const isActive = active === item.href.replace("#", "");
@@ -78,7 +102,6 @@ export default function Navbar() {
           })}
         </div>
 
-        {/* Right Side */}
         <div className="flex items-center gap-4">
           <ThemeToggle />
 
@@ -92,7 +115,6 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
       {menuOpen && (
         <div className="border-t border-white/10 bg-background/95 backdrop-blur-xl md:hidden">
           <div className="flex flex-col px-6 py-4">
