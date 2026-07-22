@@ -32,25 +32,25 @@ export default function Vision() {
 
         <div className="mt-20 grid gap-8 md:grid-cols-2">
 
-          <MissionCard
+          <VisionCard
             emoji="❤️"
             title="Human Connection"
             description="Technology should never replace human connection. It should strengthen it."
           />
 
-          <MissionCard
+          <VisionCard
             emoji="🧠"
             title="Human-Centered AI"
             description="Designing AI that understands emotions, context, and memory instead of simply generating responses."
           />
 
-          <MissionCard
+          <VisionCard
             emoji="🏥"
             title="Healthcare AI"
             description="Applying AI to improve healthcare accessibility, decision support, and patient well-being."
           />
 
-          <MissionCard
+          <VisionCard
             emoji="🌍"
             title="Vision"
             description="To build AI that reduces loneliness, empowers people, and creates positive social impact."

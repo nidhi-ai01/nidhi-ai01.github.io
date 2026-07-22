@@ -24,35 +24,35 @@ export default function Journey() {
 
         <div className="mt-20">
 
-          <TimelineItem
+          <JourneyItem
             year="2023"
             title="Started Exploring AI"
             company="Student & Builder"
             description="Built early machine learning projects and developed a strong interest in solving real-world problems with AI."
           />
 
-          <TimelineItem
+          <JourneyItem
             year="2024"
             title="Research Intern"
             company="IIT Hyderabad"
             description="Worked on Android malware detection using deep learning, gaining practical experience in applied AI research."
           />
 
-          <TimelineItem
+          <JourneyItem
             year="2025"
             title="Founder's Office Associate"
             company="WowDev AI"
             description="Collaborated across product and AI initiatives, contributing to strategy and execution while working in a fast-paced startup environment."
           />
 
-          <TimelineItem
+          <JourneyItem
             year="2026"
             title="Founder"
             company="HeartHaxor"
             description="Founded HeartHaxor to build emotionally intelligent AI companions focused on empathy, memory, and meaningful conversations."
           />
 
-          <TimelineItem
+          <JourneyItem
             year="Today"
             title="AI Consultant & Researcher"
             company="Building the Future"

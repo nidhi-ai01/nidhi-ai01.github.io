@@ -19,7 +19,7 @@ const platforms = [
   "Render",
 ];
 
-export default function Expertise() {
+export default function Skills() {
   return (
     <section id="expertise" className="py-32">
       <div className="mx-auto max-w-7xl px-6">

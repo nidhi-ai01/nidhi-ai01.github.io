@@ -1,7 +1,7 @@
 import ActivityCard from "./ActivityCard";
 import InviteCard from "./InviteCard";
 
-export default function Teaching() {
+export default function Community() {
   return (
     <section
       id="teaching"
