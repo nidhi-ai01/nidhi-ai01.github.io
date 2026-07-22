@@ -3,6 +3,7 @@ import LoadingScreen from "@/components/layout/LoadingScreen";
 import PageLayout from "@/components/layout/PageLayout";
 import Hero from "@/components/hero/Hero";
 import Mission from "@/components/mission/Mission";
+import Research from "@/components/research/Research";
 
 export default function Home() {
   return (
@@ -10,12 +11,11 @@ export default function Home() {
       <LoadingScreen />
       <GradientBackground />
 
-      <PageLayout>
-        <Hero />
-
-        <Mission />
-
-      </PageLayout>
+     <PageLayout>
+  <Hero />
+  <Mission />
+  <Research />
+</PageLayout>
     </>
   );
 }
