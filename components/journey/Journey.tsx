@@ -1,6 +1,5 @@
-import TimelineItem from "./TimelineItem";
-
-export default function Timeline() {
+import JourneyItem from "./JourneyItem";
+export default function Journey() {
   return (
     <section
       id="timeline"

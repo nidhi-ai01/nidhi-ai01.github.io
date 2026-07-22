@@ -1,6 +1,5 @@
-import MissionCard from "./MissionCard";
-
-export default function Mission() {
+import VisionCard from "./VisionCard";
+export default function Vision() {
   return (
     <section
       id="mission"
@@ -15,7 +14,7 @@ export default function Mission() {
         <h2 className="mt-4 text-5xl font-bold">
           Why I Build AI
         </h2>
-
+    
         <p className="mt-8 max-w-3xl text-lg text-muted leading-8">
           I believe AI should understand people,
           not just respond to prompts.

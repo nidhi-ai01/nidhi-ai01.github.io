@@ -11,19 +11,21 @@ export default function Navbar() {
           Nidhi Tiwari
         </h1>
 
-        <div className="hidden gap-8 md:flex">
+        <div className="hidden md:flex gap-8">
 
-          <a href="#">Home</a>
+  <a href="#about">About</a>
 
-          <a href="#">Mission</a>
+  <a href="#projects">Projects</a>
 
-          <a href="#">Research</a>
+  <a href="#research">Research</a>
 
-          <a href="#">Writing</a>
+  <a href="#resume">Resume</a>
 
-          <a href="#">Contact</a>
+  <a href="#ai">AI</a>
 
-        </div>
+  <a href="#contact">Contact</a>
+
+</div>
 
         <ThemeToggle />
 

@@ -1,12 +1,13 @@
 import GradientBackground from "@/components/shared/GradientBackground";
 import LoadingScreen from "@/components/layout/LoadingScreen";
 import PageLayout from "@/components/layout/PageLayout";
-import Hero from "@/components/hero/Hero";
-import Mission from "@/components/mission/Mission";
+
+import About from "@/components/about/About";
+import Vision from "@/components/vision/Vision";
 import Research from "@/components/research/Research";
-import Timeline from "@/components/timeline/Timeline";
-import Expertise from "@/components/expertise/Expertise";
-import Teaching from "@/components/teaching/Teaching";
+import Journey from "@/components/journey/Journey";
+import Skills from "@/components/skills/Skills";
+import Community from "@/components/community/Community";
 import Contact from "@/components/contact/Contact";
 
 export default function Home() {
@@ -16,12 +17,12 @@ export default function Home() {
       <GradientBackground />
 
      <PageLayout>
-  <Hero />
-  <Mission />
+  <About />
+  <Vision />
   <Research />
-  <Timeline />
-  <Expertise /> 
-  <Teaching />  
+  <Journey />
+  <Skills />
+  <Community />
   <Contact />
 </PageLayout>
     </>

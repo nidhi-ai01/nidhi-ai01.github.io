@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import HeroBadge from "./HeroBadge";
-import HeroButtons from "./HeroButtons";
-import HeroSocials from "./HeroSocials";
-import HeroStats from "./HeroStats";
-import HeroAvatar from "./HeroAvatar";
+import AboutBadge from "./AboutBadge";
+import AboutButtons from "./AboutButtons";
+import AboutSocials from "./AboutSocials";
+import AboutStats from "./AboutStats";
+import AboutAvatar from "./AboutAvatar";
 
-export default function Hero() {
+export default function About() {
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden">
       {/* Background Glow */}
@@ -22,7 +22,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <HeroBadge />
+          <AboutBadge />
 
           <h1 className="mt-8 text-5xl font-bold leading-tight md:text-7xl">
             Building AI
@@ -52,11 +52,11 @@ export default function Hero() {
             interactions.
           </p>
 
-          <HeroButtons />
+          <AboutButtons />
 
-          <HeroSocials />
+          <AboutSocials />
 
-          <HeroStats />
+          <AboutStats />
         </motion.div>
 
         {/* Right */}
@@ -66,7 +66,7 @@ export default function Hero() {
           transition={{ duration: 0.9 }}
           className="flex justify-center"
         >
-          <HeroAvatar />
+          <AboutAvatar />
         </motion.div>
       </div>
 
