@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
@@ -15,6 +16,7 @@ const navItems = [
 
 export default function Navbar() {
   const [active, setActive] = useState("about");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const sections = navItems
@@ -49,6 +51,7 @@ export default function Navbar() {
           Nidhi Tiwari
         </a>
 
+        {/* Desktop Navigation */}
         <div className="hidden items-center gap-8 md:flex">
           {navItems.map((item) => {
             const isActive = active === item.href.replace("#", "");
@@ -75,8 +78,37 @@ export default function Navbar() {
           })}
         </div>
 
-        <ThemeToggle />
+        {/* Right Side */}
+        <div className="flex items-center gap-4">
+          <ThemeToggle />
+
+          <button
+            className="md:hidden"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle navigation menu"
+          >
+            {menuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </nav>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="border-t border-white/10 bg-background/95 backdrop-blur-xl md:hidden">
+          <div className="flex flex-col px-6 py-4">
+            {navItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                onClick={() => setMenuOpen(false)}
+                className="py-3 text-muted-foreground transition hover:text-primary"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </header>
   );
 }
