@@ -7,6 +7,8 @@ import Research from "@/components/research/Research";
 import Timeline from "@/components/timeline/Timeline";
 import Expertise from "@/components/expertise/Expertise";
 import Teaching from "@/components/teaching/Teaching";
+import Footer from "./Footer";
+import Contact from "@/components/contact/Contact";
 
 export default function Home() {
   return (
@@ -21,6 +23,8 @@ export default function Home() {
   <Timeline />
   <Expertise /> 
   <Teaching />  
+  <Footer />
+  <Contact />
 </PageLayout>
     </>
   );
