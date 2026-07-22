@@ -6,6 +6,7 @@ import Mission from "@/components/mission/Mission";
 import Research from "@/components/research/Research";
 import Timeline from "@/components/timeline/Timeline";
 import Expertise from "@/components/expertise/Expertise";
+import Teaching from "@/components/teaching/Teaching";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
   <Research />
   <Timeline />
   <Expertise /> 
+  <Teaching />  
 </PageLayout>
     </>
   );
